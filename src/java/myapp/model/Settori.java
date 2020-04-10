@@ -41,6 +41,49 @@ public class Settori implements Serializable{
     
     @OneToMany(cascade= CascadeType.ALL, mappedBy= "Settore")
     private Set<Segnalazioni> segnalazioniCollection;
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public int getIdSettore() {
+        return idSettore;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Utenti getUtente() {
+        return utente;
+    }
+
+    public Set<Segnalazioni> getSegnalazioniCollection() {
+        return segnalazioniCollection;
+    }
+
+    public void setIdSettore(int idSettore) {
+        this.idSettore = idSettore;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setUtente(Utenti utente) {
+        this.utente = utente;
+    }
+
+    public void setSegnalazioniCollection(Set<Segnalazioni> segnalazioniCollection) {
+        this.segnalazioniCollection = segnalazioniCollection;
+    }
+
+    @Override
+    public String toString() {
+        return "Settori{" + "idSettore=" + idSettore + ", nome=" + nome + ", utente=" + utente + ", segnalazioniCollection=" + segnalazioniCollection + '}';
+    }
+    
+    
     
     
 }

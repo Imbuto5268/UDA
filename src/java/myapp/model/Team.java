@@ -14,6 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -46,7 +48,7 @@ public class Team implements Serializable {
         @JoinColumn(name = "Team", referencedColumnName = "IdTeam")}, inverseJoinColumns = {
         @JoinColumn(name = "Utente", referencedColumnName = "Username")})
     @ManyToMany
-    private Set<Utente> utenti;
+    private Set<Utenti> utenti;
     
     public int getIdTeam() {
         return idTeam;

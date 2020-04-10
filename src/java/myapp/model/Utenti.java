@@ -55,6 +55,89 @@ public class Utenti implements Serializable{
     
     @ManyToMany(mappedBy="utenti")
     private Set<Team> team;
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public String getResponsabile() {
+        return responsabile;
+    }
+
+    public Set<Settori> getSettoriCollection() {
+        return settoriCollection;
+    }
+
+    public Set<Segnalazioni> getSegnalazioniCollection() {
+        return segnalazioniCollection;
+    }
+
+    public Set<VerificaAzioniCorrettive> getVerificaAzioniCorrettiveCollection() {
+        return verificaAzioniCorrettiveCollection;
+    }
+
+    public Set<Team> getTeam() {
+        return team;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public void setResponsabile(String responsabile) {
+        this.responsabile = responsabile;
+    }
+
+    public void setSettoriCollection(Set<Settori> settoriCollection) {
+        this.settoriCollection = settoriCollection;
+    }
+
+    public void setSegnalazioniCollection(Set<Segnalazioni> segnalazioniCollection) {
+        this.segnalazioniCollection = segnalazioniCollection;
+    }
+
+    public void setVerificaAzioniCorrettiveCollection(Set<VerificaAzioniCorrettive> verificaAzioniCorrettiveCollection) {
+        this.verificaAzioniCorrettiveCollection = verificaAzioniCorrettiveCollection;
+    }
+
+    public void setTeam(Set<Team> team) {
+        this.team = team;
+    }
+
+    @Override
+    public String toString() {
+        return "Utenti{" + "username=" + username + ", nome=" + nome + ", cognome=" + cognome + ", pass=" + pass + ", responsabile=" + responsabile + ", settoriCollection=" + settoriCollection + ", segnalazioniCollection=" + segnalazioniCollection + ", verificaAzioniCorrettiveCollection=" + verificaAzioniCorrettiveCollection + ", team=" + team + '}';
+    }
+    
+    
     
     
 }

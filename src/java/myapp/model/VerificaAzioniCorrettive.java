@@ -6,6 +6,7 @@
 package myapp.model;
 
 import java.io.Serializable;
+import java.util.logging.Logger;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -67,5 +68,27 @@ public class VerificaAzioniCorrettive implements Serializable {
     public String toString() {
         return "myapp.model.VerificaAzioniCorrettive[ id=" + idVerifica + " ]";
     }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public int getUtente() {
+        return utente;
+    }
+
+    public int getAzioneCorrettiva() {
+        return azioneCorrettiva;
+    }
+
+    public void setUtente(int utente) {
+        this.utente = utente;
+    }
+
+    public void setAzioneCorrettiva(int azioneCorrettiva) {
+        this.azioneCorrettiva = azioneCorrettiva;
+    }
+    
+    
     
 }

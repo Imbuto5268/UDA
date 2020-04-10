@@ -6,8 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -31,6 +36,71 @@ public class Segnalazioni implements Serializable{
     
     @Column(name="Data")
     private Date data;
+
+    @Override
+    public String toString() {
+        return "Segnalazioni{" + "idSegnalazione=" + idSegnalazione + ", data=" + data + ", tipo=" + tipo + ", descrizione=" + descrizione + ", utente=" + utente + ", settore=" + settore + ", azioniCorrettiveCollection=" + azioniCorrettiveCollection + '}';
+    }
+
+    public void setIdSegnalazione(int idSegnalazione) {
+        this.idSegnalazione = idSegnalazione;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
+
+    public void setUtente(Utenti utente) {
+        this.utente = utente;
+    }
+
+    public void setSettore(Settori settore) {
+        this.settore = settore;
+    }
+
+    public void setAzioniCorrettiveCollection(Set<AzioniCorrettive> azioniCorrettiveCollection) {
+        this.azioniCorrettiveCollection = azioniCorrettiveCollection;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public int getIdSegnalazione() {
+        return idSegnalazione;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public Utenti getUtente() {
+        return utente;
+    }
+
+    public Settori getSettore() {
+        return settore;
+    }
+
+    public Set<AzioniCorrettive> getAzioniCorrettiveCollection() {
+        return azioniCorrettiveCollection;
+    }
        
     @Column(name="Tipo")
     private String tipo;
