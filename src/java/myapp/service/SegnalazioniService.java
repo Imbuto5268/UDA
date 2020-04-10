@@ -14,8 +14,8 @@ import myapp.model.Segnalazioni;
  */
 public interface SegnalazioniService {
     Segnalazioni findById(int id);
-    void saveSegnalazioni(Segnalazioni segnalazioni);
-    void updateSegnalazioni(Segnalazioni segnalazioni);
-    void deleteSegnalazioni(int id);
+    void saveSegnalazione(Segnalazioni segnalazione);
+    void updateSegnalazione(Segnalazioni segnalazione);
+    void deleteSegnalazione(int idSegnalazione);
     List<Segnalazioni> findAllSegnalazioni();
 }

@@ -13,9 +13,9 @@ import myapp.model.VerificaAzioniCorrettive;
  * @author favaron
  */
 public interface VerificaAzioniCorrettiveService {
-    VerificaAzioniCorrettive findById(int id);
-    void saveAzioniCorrettive(VerificaAzioniCorrettive verificaAzioniCorrettive);
-    void updateAzioniCorrettive(VerificaAzioniCorrettive verificaAzioniCorrettive);
-    void deleteAzioniCorrettive(int id);
+    VerificaAzioniCorrettive findById(int idVerifica);
+    void saveVerificaAzioneCorrettiva(VerificaAzioniCorrettive verificaAzioneCorrettiva);
+    void updateVerificaAzioneCorrettiva(VerificaAzioniCorrettive verificaAzioneCorrettiva);
+    void deleteVerificaAzioneCorrettiva(int idVerifica);
     List<VerificaAzioniCorrettive> findAllVerificaAzioniCorrettive();
 }

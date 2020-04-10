@@ -13,9 +13,9 @@ import myapp.model.Settori;
  * @author favaron
  */
 public interface SettoriService {
-    Settori findById(int id);
-    void saveSettori(Settori settori);
-    void updateSettori(Settori settori);
-    void deleteSettori(int id);
+    Settori findById(int idSettore);
+    void saveSettore(Settori settore);
+    void updateSettore(Settori settore);
+    void deleteSettore(int idSettore);
     List<Settori> findAllSettori();
 }

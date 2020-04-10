@@ -13,9 +13,9 @@ import myapp.model.AzioniCorrettive;
  * @author favaron
  */
 public interface AzioniCorrettiveService {
-    AzioniCorrettive findById(int id);
-    void saveAzioniCorrettive(AzioniCorrettive azioniCorrettive);
-    void updateAzioniCorrettive(AzioniCorrettive azioniCorrettive);
-    void deleteAzioniCorrettive(int id);
-    List<AzioniCorrettive> findAllAzioniCorrettive();
+    AzioniCorrettive findById(int idAzione);
+    void saveAzioneCorrettiva(AzioniCorrettive azioneCorrettiva);
+    void updateAzioneCorrettiva(AzioniCorrettive azioneCorrettiva);
+    void deleteAzioneCorrettiva(int idAzione);
+    List<AzioniCorrettive> findAllAzioni();
 }

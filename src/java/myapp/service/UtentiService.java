@@ -13,9 +13,9 @@ import myapp.model.Utenti;
  * @author favaron
  */
 public interface UtentiService {
-    Utenti findById(String id);
-    void saveUtenti(Utenti utenti);
-    void updateUtenti(Utenti utenti);
-    void deleteUtenti(String id);
+    Utenti findById(String username);
+    void saveUtente(Utenti utente);
+    void updateUtente(Utenti utente);
+    void deleteUtente(String username);
     List<Utenti> findAllUtenti();
 }

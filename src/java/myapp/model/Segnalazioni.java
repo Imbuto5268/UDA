@@ -36,7 +36,24 @@ public class Segnalazioni implements Serializable{
     
     @Column(name="Data")
     private Date data;
-
+    
+    @Column(name="Tipo")
+    private String tipo;
+    
+    @Column(name="Descrizione")
+    private String descrizione;
+    
+    @JoinColumn(name="Utente",referencedColumnName="Username")
+    @ManyToOne
+    private Utenti utente;
+    
+    @JoinColumn(name="Settore",referencedColumnName="IdSettore")
+    @ManyToOne
+    private Settori settore;
+    
+    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Segnalazione")
+    private Set<AzioniCorrettive> azioniCorrettiveCollection;
+    
     @Override
     public String toString() {
         return "Segnalazioni{" + "idSegnalazione=" + idSegnalazione + ", data=" + data + ", tipo=" + tipo + ", descrizione=" + descrizione + ", utente=" + utente + ", settore=" + settore + ", azioniCorrettiveCollection=" + azioniCorrettiveCollection + '}';
@@ -101,21 +118,5 @@ public class Segnalazioni implements Serializable{
     public Set<AzioniCorrettive> getAzioniCorrettiveCollection() {
         return azioniCorrettiveCollection;
     }
-       
-    @Column(name="Tipo")
-    private String tipo;
-    
-    @Column(name="Descrizione")
-    private String descrizione;
-    
-    @JoinColumn(name="Utente",referencedColumnName="Username")
-    @ManyToOne
-    private Utenti utente;
-    
-    @JoinColumn(name="Settore",referencedColumnName="IdSettore")
-    @ManyToOne
-    private Settori settore;
-    
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Segnalazione")
-    private Set<AzioniCorrettive> azioniCorrettiveCollection;
+
 }

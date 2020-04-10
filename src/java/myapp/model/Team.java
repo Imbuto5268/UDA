@@ -73,6 +73,22 @@ public class Team implements Serializable {
     public void setSettore(int settore) {
         this.settore = settore;
     }
+
+    public Set<AzioniCorrettive> getAzioniCorrettiveCollection() {
+        return azioniCorrettiveCollection;
+    }
+
+    public void setAzioniCorrettiveCollection(Set<AzioniCorrettive> azioniCorrettiveCollection) {
+        this.azioniCorrettiveCollection = azioniCorrettiveCollection;
+    }
+
+    public Set<Utenti> getUtenti() {
+        return utenti;
+    }
+
+    public void setUtenti(Set<Utenti> utenti) {
+        this.utenti = utenti;
+    }
     
     
     
